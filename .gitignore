@@ -4,3 +4,4 @@ dist/
 proposal/*.pdf
 __pycache__/
 .superpowers/
+.pytest-tmp/

@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>$title</title>
+<style>
+@page { size: A4; margin: 18mm 16mm 22mm 16mm; }
+body { font-family: "Segoe UI", Arial, sans-serif; font-size: 11pt; color: #1f2933; margin: 0; padding: 18px; background: #fff; }
+.hindi { font-family: "Nirmala UI", "Mangal", sans-serif; }
+.watermark { position: fixed; top: 36%; left: 6%; transform: rotate(-30deg); font-size: 92pt; color: rgba(200, 30, 30, 0.14); font-weight: 800; letter-spacing: 12px; z-index: 0; }
+.footer { position: fixed; bottom: 0; left: 0; right: 0; font-size: 8pt; color: #7b8794; border-top: 1px solid #cbd2d9; padding: 3px 18px; background: #fff; }
+.brand { border-bottom: 3px solid $accent; padding-bottom: 6px; margin-bottom: 14px; display: flex; justify-content: space-between; align-items: flex-end; }
+.brand-name { font-size: 17pt; font-weight: 700; color: $accent; }
+.brand-sub { font-size: 9pt; color: #52606d; }
+table { border-collapse: collapse; width: 100%; margin: 8px 0; }
+td, th { border: 1px solid #cbd2d9; padding: 5px 8px; text-align: left; vertical-align: top; }
+th { background: #f0f4f8; width: 38%; font-weight: 600; }
+h1 { font-size: 15pt; margin: 6px 0 10px; }
+h2 { font-size: 12.5pt; margin: 14px 0 6px; }
+.page-break { page-break-after: always; }
+.small { font-size: 9pt; color: #52606d; }
+</style></head>
+<body>
+<div class="watermark">SAMPLE</div>
+<div class="footer">Synthetic document for testing. Fictional institution. Not a real record.</div>
+$body
+</body></html>
