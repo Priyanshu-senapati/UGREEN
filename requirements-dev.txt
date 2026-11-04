@@ -1,0 +1,6 @@
+pytest>=8
+playwright>=1.48
+pillow>=11
+pypdf>=5
+markdown>=3.7
+edge-tts>=7

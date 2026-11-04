@@ -1,0 +1,6 @@
+.venv/
+sample-family/out/
+dist/
+proposal/*.pdf
+__pycache__/
+.superpowers/
