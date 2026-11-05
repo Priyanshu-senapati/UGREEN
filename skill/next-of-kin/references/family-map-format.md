@@ -97,7 +97,7 @@ Every finding names the item ID, what was found, its source IDs, and a suggested
 ## Finding types
 
 - **Review**: different items differ in a way worth checking, for example a bank nominee who differs from an insurance nominee on a different product.
-- **Gap**: an expected detail is absent, for example no nominee on a mutual fund statement. Wording is always "not found in the folders you shared", never "you have none".
+- **Gap**: an expected detail is absent, for example no nominee on a mutual fund statement. Expected on every map: a will, and a nominee for each policy, account, deposit and investment. Wording is always "not found in the folders you shared", never "you have none"; for example "No will found in the folders you shared. If one exists, add it."
 - **Expiring**: a deadline within 30 days of today, or one that has passed: a premium or renewal due date, a maturity, a policy end date, or a submission such as a pension life certificate. Routine recurring payments such as monthly EMIs and bills are recorded as facts, never as Expiring. The raw date is always shown next to this label.
 - **Not searched**: the search for a mentioned item failed, so nothing is known. It is never shown as Missing.
 - **Not cross-checked**: comparing documents about the same item failed, so no agreement is claimed.

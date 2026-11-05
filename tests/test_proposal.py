@@ -35,3 +35,11 @@ def test_pdf_size_and_content(tmp_path):
     flat = " ".join(text.split())
     for item in ITEMS:
         assert item[:25] in flat, item
+
+
+def test_claims_match_repo():
+    text = read(MD)
+    assert "without uploading anything" not in text
+    claimed = int(re.search(r"(\d+) automated tests", text).group(1))
+    actual = sum(read(p).count("\ndef test_") for p in (ROOT / "tests").glob("test_*.py"))
+    assert claimed == actual, (claimed, actual)

@@ -41,3 +41,12 @@ def test_eight_approval_points():
 
 def test_clean():
     assert checker_violations(read(DOC)) == []
+
+
+def test_photo_only_families_still_reach_photo_search():
+    assert "operations 3 and 4 both find nothing" in blocks(read(DOC))[3]
+
+
+def test_failed_qa_kept_apart_from_not_stated():
+    body = blocks(read(DOC))[18]
+    assert "Could not read" in body and "Not checked" in body

@@ -45,7 +45,7 @@ Operation numbers identify operations, not their order. `SKILL.md` sets the orde
 - **Approval:** None.
 - **Failure condition:** The search fails, or a folder returns an empty list.
 - **Recovery:** Report "no documents found in" that folder for an empty list. Report the failure for a failed search.
-- **Continue:** Yes, if any file was found in any folder.
+- **Continue:** Yes. Always continue to operation 4, because a family may share only photos. Stop only if operations 3 and 4 both find nothing.
 
 ### 4. Find document photos
 - **Precondition:** At least one accessible allowed folder. Scans and phone photos of documents can sit in any of them.
@@ -100,7 +100,7 @@ Operation numbers identify operations, not their order. `SKILL.md` sets the orde
 ### 9. Cross-check the same item
 - **Precondition:** At least two sources describing the same reference number or the same property.
 - **Permissions:** Read access to those files.
-- **Agent and action:** document-agent, `ug-document` `reconcile` on only those files.
+- **Agent and action:** document-agent, `ug-document` `reconcile` on those document files only. Facts read from photos are compared by the parent Skill.
 - **Expected output:** Agreements and differences between the sources.
 - **Approval:** None.
 - **Failure condition:** The comparison fails.
@@ -130,7 +130,7 @@ Operation numbers identify operations, not their order. `SKILL.md` sets the orde
 ### 12. Save the map
 - **Precondition:** Owner approval and a destination.
 - **Permissions:** Write access to the destination folder.
-- **Agent and action:** knowledge-agent, `ug-knowledge` `save-text`. File name Family-Map_YYYY-MM-DD.md, with _HHMM added when that name exists. Never overwrite an existing file.
+- **Agent and action:** first file-agent, `ug-filesystem` `find` for existing Family-Map files in the destination, to work out the version and the exact file name (Family-Map_YYYY-MM-DD.md, with _HHMM added when that name exists). Then knowledge-agent, `ug-knowledge` `save-text` with the full approved map text as the content and that exact file name. Never overwrite an existing file.
 - **Expected output:** `verified=true` and the output file path.
 - **Approval:** The built-in approval of the save action.
 - **Failure condition:** The save fails or is not approved.
@@ -140,7 +140,7 @@ Operation numbers identify operations, not their order. `SKILL.md` sets the orde
 ### 13. Confirm the save
 - **Precondition:** The output file path from operation 12.
 - **Permissions:** Read access to the destination.
-- **Agent and action:** file-agent, `ug-filesystem` `stat` on the output file.
+- **Agent and action:** file-agent, `ug-filesystem` `stat` on the output file and on the previous map, if there is one.
 - **Expected output:** The file exists, with its size and time.
 - **Approval:** None.
 - **Failure condition:** The file is not found.
@@ -150,7 +150,7 @@ Operation numbers identify operations, not their order. `SKILL.md` sets the orde
 ### 14. Tag the original files (optional)
 - **Precondition:** The owner opted in.
 - **Permissions:** Tag permission on the listed originals.
-- **Agent and action:** file-agent, `ug-filemgr` `tag-add-file` (with `ug-filemgr` `tag-list` and `ug-filemgr` `tag-set` to find or create the Next of Kin tag).
+- **Agent and action:** file-agent, `ug-filemgr` `tag-get-by-name` to find the Next of Kin tag, then `ug-filemgr` `tag-add-file`. If the tag does not exist, the owner creates it once in File Manager.
 - **Expected output:** Tags applied.
 - **Approval:** Each tag change needs approval.
 - **Failure condition:** Tagging fails or is declined.
@@ -195,8 +195,8 @@ Operation numbers identify operations, not their order. `SKILL.md` sets the orde
 - **Agent and action:** document-agent, `ug-document` `qa` on that document for the plan question.
 - **Expected output:** A quoted answer with its page.
 - **Approval:** None.
-- **Failure condition:** The document does not answer the question, or the action fails.
-- **Recovery:** Say "Your policy didn't state this; confirm with the insurer" (or the relevant institution).
+- **Failure condition:** The document does not answer the question; or the call fails or the document cannot be opened.
+- **Recovery:** Not stated: say "Your policy didn't state this; confirm with the insurer" (or the relevant institution). Failed or unreadable: say "Could not read" with the source ID, ask the family to confirm with the institution, and list it under Not checked. A failed read is never presented as something the document does not say.
 - **Continue:** Yes.
 
 ### 19. Save the report or plan (optional)

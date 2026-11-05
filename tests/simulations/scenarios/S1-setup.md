@@ -109,6 +109,9 @@ completed.
 - **The health insurance card:** completed. Evidence: Papa Documents/health-policy.pdf p.1 (the policy schedule). The card itself was not found.
 - **Anything else:** completed. An empty list.
 
+### file-agent · ug-filesystem find for Family-Map files in the destination folder
+completed. An empty list: there are no Family-Map files in this folder yet.
+
 ### knowledge-agent · ug-knowledge save-text
 completed. verified=true. outputFile: Family/Next of Kin/Family-Map_2026-11-10.md
 

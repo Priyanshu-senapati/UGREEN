@@ -188,7 +188,7 @@ The parent Skill only delegates (`delegate --target <agent-id> --instruction '<t
 | Ask an original document | document-agent | `ug-document qa` (intent `locate_content` / `qa`) |
 | Save map, report or plan | knowledge-agent | `ug-knowledge save-text` (built-in approval) |
 | Confirm save; find and read map; change check | file-agent | `ug-filesystem stat`, `find`, `cat` |
-| Optional tagging | file-agent | `ug-filemgr tag-list`, `tag-set`, `tag-add-file` |
+| Optional tagging | file-agent | `ug-filemgr tag-get-by-name`, `tag-add-file` (the owner creates the tag once in File Manager) |
 
 ## 7. Execution contract
 

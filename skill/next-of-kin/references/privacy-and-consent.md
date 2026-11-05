@@ -10,6 +10,7 @@ Ask these questions at the start of setup, in this order, and record the answers
 2. "Is that person present and consenting to Next of Kin reading their documents?" Continue only with a clear yes from the owner. If the owner is not present and consenting, stop: Next of Kin is set up with the owner, not about them.
 3. "Is Uliya running on a local model or a cloud model on this NAS?"
    - Local model: continue.
+   - Cloud model or not sure: recommend switching to the local model for the most private setup.
    - Cloud model: explain that text extracted from the documents will be sent to that model provider, then ask for a separate, explicit yes. Without it, stop.
    - Treat "not sure" the same as a cloud model. Explain the risk and ask for explicit consent before reading anything.
 4. "Which folders may Next of Kin read?" Accept only folders the owner names, for example "Papa Documents", "Phone Backup/WhatsApp Images" and "Voice Notes". Never read the whole NAS and never read other users' folders.

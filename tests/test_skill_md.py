@@ -79,3 +79,60 @@ def test_disclosures():
     for heading in ("## Third-party components", "## Licences", "## AI tools used", "## Work done during the hackathon"):
         assert heading in text
     assert "uliya-skill-kit 0.7.3" in text and "Claude Code" in text
+
+
+# ---- Final review fixes ----
+def _delegate_for(action):
+    return [i for _, i in DELEGATE.findall(read(SKILL)) if action in i]
+
+
+def test_identity_images_recorded_by_path_never_opened():
+    text = read(SKILL)
+    assert "record identity images by path only and never open them" in text
+    assert all("describe no person" in i for i in _delegate_for("vision-vlm"))
+
+
+def test_voice_notes_redact_credentials():
+    assert all("never return passwords, PINs or OTPs" in i for i in _delegate_for("audio-transcription"))
+    assert "never quote or translate a sentence that contains a credential" in read(SKILL)
+
+
+def test_update_reruns_consent_with_owner_present():
+    text = read(SKILL)
+    assert "rerun Conversation 1 steps 1 to 14" in text and "only with the owner present" in text
+
+
+def test_versioned_save_checks_destination_first():
+    text = read(SKILL)
+    assert any("Family-Map_" in i and "destination folder" in i for i in _delegate_for("ug-filesystem find"))
+    saves = _delegate_for("save-text")
+    assert saves and all("exact file name" in i for i in saves)
+    assert "full approved map text" in saves[0]
+    assert any("previous map" in i for i in _delegate_for("ug-filesystem stat"))
+
+
+def test_tags_use_real_catalog_actions():
+    text = read(SKILL)
+    assert "tag-get-by-name" in text and "tag-set" not in text
+
+
+def test_failed_qa_is_not_reported_as_not_stated():
+    assert "Could not read" in read(SKILL)
+
+
+def test_fixed_output_names_and_full_read():
+    text = read(SKILL)
+    assert "Readiness-Report_YYYY-MM-DD" in text and "Continuity-Plan_YYYY-MM-DD" in text
+    assert any("Family-Map_*.md" in i and "whole file" in i for i in _delegate_for("ug-filesystem cat"))
+
+
+def test_expected_items_gap_check():
+    text = read(SKILL)
+    assert "a will, and a nominee on each policy, account, deposit and investment" in text
+    assert "No will found in the folders you shared" in read(REFS_DIR / "family-map-format.md")
+
+
+def test_reconcile_documents_only_and_partial_copies():
+    text = read(SKILL)
+    assert all("document files only" in i for i in _delegate_for("reconcile"))
+    assert "a field missing from a partial copy is not a difference" in text

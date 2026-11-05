@@ -31,3 +31,7 @@ def test_no_workaround_rule_and_clean():
     text = read(DOC)
     assert "no workaround" in text
     assert checker_violations(text) == []
+
+
+def test_recommends_local_model():
+    assert "recommend switching to the local model" in read(DOC)

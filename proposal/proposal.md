@@ -18,7 +18,7 @@ Ramesh consents and names his folders. Next of Kin finds documents, scans and vo
 
 ## 5. How is your idea different from existing tools or common AI solutions?
 
-Family vaults (NammaPetti, Soult) need someone to type everything in. Next of Kin is zero-form: it reads what already exists. Unlike a document chatbot, it detects conflicts (two nominees on one policy), finds items a voice note mentions but the folders lack, and grounds plans in the family's own policy, without uploading anything.
+Family vaults (NammaPetti, Soult) need someone to type everything in. Next of Kin is zero-form: it reads what already exists. Unlike a document chatbot, it detects conflicts (two nominees on one policy), finds items a voice note mentions but the folders lack, and grounds plans in the family's own policy, keeping documents at home.
 
 ## 6. Which UGREEN AI NAS features does your Skill use, and at which step?
 
@@ -33,7 +33,7 @@ A Markdown-only Skill delegating to UGREEN's four NAS agents. A 19-operation exe
 
 ## 8. What have you built so far? What is not built yet? What still needs testing on a NAS?
 
-Built: the full package (SKILL.md plus five references), passing the kit checker with zero errors and warnings; a synthetic Sharma family; six simulated runs checked by 61 automated tests. Not built: re-processing only changed files. Needs NAS testing: OCR-text search, extraction from scans, translation approval, mixed Hindi-English transcription.
+Built: the full package (SKILL.md plus five references), passing the kit checker with zero errors and warnings; a synthetic Sharma family; six simulated runs; 76 automated tests in total. Not built: re-processing only changed files. Needs NAS testing: OCR-text search, scan extraction, translation approval, save naming, mixed Hindi-English transcription.
 
 ## 9. How will you test your Skill if you become a Finalist?
 
