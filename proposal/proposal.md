@@ -1,8 +1,8 @@
-# Next of Kin · Track: Open Innovation
+# Chaabi · The key to everything Papa knew · Track: Open Innovation
 
 ## 1. What does your Skill do?
 
-Next of Kin turns the documents, document photos and voice notes a family already keeps on its NAS into a source-linked Family Map, a readiness check and a plan for when the person who knows everything is unavailable.
+Chaabi turns the documents, document photos and voice notes a family already keeps on its NAS into a source-linked Family Map, a readiness check and a plan for when the person who knows everything is unavailable.
 
 ## 2. Who is your target user, and what is their problem?
 
@@ -14,11 +14,11 @@ Three conversations: Set up (with owner consent), Check our readiness, and What 
 
 ## 4. What is the main user flow?
 
-Ramesh consents and names his folders. Next of Kin finds documents, scans and voice notes; extracts masked facts; transcribes and translates; cross-checks sources; and searches for anything mentioned but absent. Ramesh approves; the map is saved where his daughter Priya can read it. Later Priya asks "What if Papa is in hospital?" and gets a phased plan quoting their own policy.
+Ramesh consents and names his folders. Chaabi finds documents, scans and voice notes; extracts masked facts; transcribes and translates; cross-checks sources; and searches for anything mentioned but absent. Ramesh approves; the map is saved where his daughter Priya can read it. Later Priya asks "What if Papa is in hospital?" and gets a phased plan quoting their own policy.
 
 ## 5. How is your idea different from existing tools or common AI solutions?
 
-Family vaults (NammaPetti, Soult) need someone to type everything in. Next of Kin is zero-form: it reads what already exists. Unlike a document chatbot, it detects conflicts (two nominees on one policy), finds items a voice note mentions but the folders lack, and grounds plans in the family's own policy, keeping documents at home.
+Family vaults (NammaPetti, Soult) need someone to type everything in. Chaabi is zero-form: it reads what already exists. Unlike a document chatbot, it detects conflicts (two nominees on one policy), finds items a voice note mentions but the folders lack, and grounds plans in the family's own policy, keeping documents at home.
 
 ## 6. Which UGREEN AI NAS features does your Skill use, and at which step?
 
@@ -48,7 +48,7 @@ It depends on Uliya's agents (stability unverified) and OCR quality. It cannot v
 ## Declarations
 
 - Solo entrant: Priyanshu Kumar Senapati.
-- Next of Kin, its Skill package and its core workflow were conceived and built during the UGREEN Hackathon 2026. Nothing was reused from earlier projects or submissions.
+- Chaabi, its Skill package and its core workflow were conceived and built during the UGREEN Hackathon 2026. Nothing was reused from earlier projects or submissions.
 - AI tools used: Claude Code (Anthropic) for research, drafting, tests and synthetic test data.
 - Electronic signature: Priyanshu Kumar Senapati
 

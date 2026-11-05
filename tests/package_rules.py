@@ -1,4 +1,4 @@
-"""Shared constants and helpers for the Next of Kin package tests."""
+"""Shared constants and helpers for the Chaabi package tests."""
 import json
 import os
 import re
@@ -6,7 +6,7 @@ import subprocess
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_DIR = ROOT / "skill" / "next-of-kin"
+SKILL_DIR = ROOT / "skill" / "chaabi"
 REFS_DIR = SKILL_DIR / "references"
 
 LABELS = ("Verified", "Unverified", "Conflict", "Missing")

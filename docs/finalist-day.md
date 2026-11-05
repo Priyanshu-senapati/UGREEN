@@ -5,14 +5,14 @@ Goal for the day: install the Skill, run the six scenarios on real hardware, fix
 ## Before the day
 
 1. Regenerate the sample family dated for the test day: `.venv/Scripts/python sample-family/generate.py --out sample-family/out --today <test-day YYYY-MM-DD> --with-audio`. The premium notice then falls 12 days after the test day, so it is Expiring.
-2. Rebuild and check the package: `.venv/Scripts/python scripts/build_zip.py`, then `node ~/tools/uliya-skill-kit/scripts/check-skill.mjs skill/next-of-kin`.
+2. Rebuild and check the package: `.venv/Scripts/python scripts/build_zip.py`, then `node ~/tools/uliya-skill-kit/scripts/check-skill.mjs skill/chaabi`.
 3. Have screen recording ready. Write the demo voice-over (English) in advance.
 
 ## Upload order on the NAS
 
-1. Create the folders `Papa Documents`, `Phone Backup/WhatsApp Images`, `Voice Notes`, `Empty Folder` and `Family/Next of Kin`.
+1. Create the folders `Papa Documents`, `Phone Backup/WhatsApp Images`, `Voice Notes`, `Empty Folder` and `Family/Chaabi`.
 2. Upload the generated files into the matching folders. Add the WhatsApp Images folder to the photo library so UGOS indexes the text in its photos, and wait for indexing to finish before running anything.
-3. Install the Skill from `dist/next-of-kin.zip`.
+3. Install the Skill from `dist/chaabi.zip`.
 4. Set Uliya to the local model, so the demo shows the privacy story honestly.
 
 ## Scenario checklist

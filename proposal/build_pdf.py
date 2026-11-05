@@ -1,4 +1,4 @@
-"""Render proposal/proposal.md to an A4 PDF: proposal/next-of-kin-proposal.pdf."""
+"""Render proposal/proposal.md to an A4 PDF: proposal/chaabi-proposal.pdf."""
 from __future__ import annotations
 
 import sys
@@ -38,7 +38,7 @@ def build_pdf(md_path: Path, pdf_path: Path) -> Path:
 
 
 def main() -> int:
-    out = build_pdf(HERE / "proposal.md", HERE / "next-of-kin-proposal.pdf")
+    out = build_pdf(HERE / "proposal.md", HERE / "chaabi-proposal.pdf")
     print(f"Built {out} ({out.stat().st_size} bytes)")
     return 0
 

@@ -1,4 +1,4 @@
-"""The Sharma family: synthetic test data for Next of Kin.
+"""The Sharma family: synthetic test data for Chaabi.
 
 Every person, institution and number here is invented. Institutions are fictional
 on purpose: real bank or insurer names on fake documents could read as impersonation.

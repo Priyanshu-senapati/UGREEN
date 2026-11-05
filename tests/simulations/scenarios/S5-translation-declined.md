@@ -1,12 +1,12 @@
 # S5: Set up when the owner declines translation
 
 - **Today:** 2026-11-10
-- **Conversation:** Set up Next of Kin
+- **Conversation:** Set up Chaabi
 - **Owner:** Ramesh Sharma (present)
 
 ## User turns (answers in order, as the Skill asks)
 
-1. Opening: "I am Ramesh Sharma. Please set up Next of Kin for my family."
+1. Opening: "I am Ramesh Sharma. Please set up Chaabi for my family."
 2. Whose records: "Mine, Ramesh Sharma."
 3. Present and consenting: "Yes, I am here and I consent."
 4. Model: "I am not sure which model Uliya uses."
@@ -15,7 +15,7 @@
 7. Voice-note language: "They are mixed Hindi and English."
 8. Translation approval, if the NAS asks: "No, do not translate anything. Keep the Hindi as it is."
 9. Preview approval: "Yes, save it."
-10. Destination: "Family Continuity Map, in the folder Family/Next of Kin. Priya and Arjun can already open that folder."
+10. Destination: "Family Continuity Map, in the folder Family/Chaabi. Priya and Arjun can already open that folder."
 11. Tags: "No tags, thank you."
 
 ## Mocks
@@ -109,7 +109,7 @@ completed.
 completed. An empty list: there are no Family-Map files in this folder yet.
 
 ### knowledge-agent · ug-knowledge save-text
-completed. verified=true. outputFile: Family/Next of Kin/Family-Map_2026-11-10.md
+completed. verified=true. outputFile: Family/Chaabi/Family-Map_2026-11-10.md
 
 ### file-agent · ug-filesystem stat on the saved file
-completed. Family/Next of Kin/Family-Map_2026-11-10.md exists, 9 KB, 2026-11-10 10:42.
+completed. Family/Chaabi/Family-Map_2026-11-10.md exists, 9 KB, 2026-11-10 10:42.

@@ -1,10 +1,10 @@
 # Simulation harness: the Uliya parent runtime, rehearsed
 
-You are standing in for the Uliya parent runtime running the Next of Kin Skill. There is no NAS. Each scenario file gives the user's turns and a scripted mock result for every delegation the Skill may make. Your job is to show what the Skill would do and produce what it would save.
+You are standing in for the Uliya parent runtime running the Chaabi Skill. There is no NAS. Each scenario file gives the user's turns and a scripted mock result for every delegation the Skill may make. Your job is to show what the Skill would do and produce what it would save.
 
 ## Inputs
 
-1. `skill/next-of-kin/SKILL.md` and every reference it links to under `skill/next-of-kin/references/`. Read all of them before starting.
+1. `skill/chaabi/SKILL.md` and every reference it links to under `skill/chaabi/references/`. Read all of them before starting.
 2. One scenario file from `tests/simulations/scenarios/`.
 
 ## Rules
@@ -27,7 +27,7 @@ Write `tests/simulations/results/<scenario id>.md` with exactly these headings:
 # Result <scenario id>
 
 ## Transcript
-(alternating **User:** and **Next of Kin:** turns; delegations as in rule 3, each followed by its Mock: line)
+(alternating **User:** and **Chaabi:** turns; delegations as in rule 3, each followed by its Mock: line)
 
 ## Saved artifact
 (the exact Family Map text passed to save-text, or the single word none)

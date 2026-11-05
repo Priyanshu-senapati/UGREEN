@@ -6,19 +6,19 @@
 
 ## User turns (answers in order, as the Skill asks)
 
-1. Opening: "I am Ramesh. Please check how ready we are. The map is in Family/Next of Kin."
+1. Opening: "I am Ramesh. Please check how ready we are. The map is in Family/Chaabi."
 2. Offer to update the map: "Yes, update it now."
 3. Any consent question during the update: "Yes, I am here and I consent. Same folders and same settings as this morning; Uliya may use a cloud model, I already approved that this morning and I approve it again."
 4. Voice-note language, if asked: "Mixed Hindi and English."
 5. Translation approval, if the NAS asks: "Yes, translate."
 6. Preview approval: "Yes, save it."
-7. Destination: "Same as before: Family Continuity Map in Family/Next of Kin."
+7. Destination: "Same as before: Family Continuity Map in Family/Chaabi."
 8. Tags: "No tags."
 9. Save the readiness report: "No."
 
 ## Mocks
-### file-agent · ug-filesystem find and read the Family Map in Family/Next of Kin
-completed. Newest file: Family/Next of Kin/Family-Map_2026-11-10.md, saved 2026-11-10 10:42. Its content is the full text under "## Saved artifact" in tests/simulations/results/S1.md. Use that text as the map.
+### file-agent · ug-filesystem find and read the Family Map in Family/Chaabi
+completed. Newest file: Family/Chaabi/Family-Map_2026-11-10.md, saved 2026-11-10 10:42. Its content is the full text under "## Saved artifact" in tests/simulations/results/S1.md. Use that text as the map.
 
 ### file-agent · ug-filesystem find for files modified after the map date
 completed. New: Phone Backup/WhatsApp Images/fd-renewal-photo.jpg · image · modified 2026-11-10 14:05. Modified: none. Deleted: none.
@@ -116,10 +116,10 @@ completed.
 - **Anything else:** completed. An empty list.
 
 ### file-agent · ug-filesystem find for Family-Map files in the destination folder
-completed. Family/Next of Kin/Family-Map_2026-11-10.md, saved 2026-11-10 10:42. No other Family-Map files.
+completed. Family/Chaabi/Family-Map_2026-11-10.md, saved 2026-11-10 10:42. No other Family-Map files.
 
 ### knowledge-agent · ug-knowledge save-text
-completed. verified=true. outputFile: Family/Next of Kin/Family-Map_2026-11-10_1532.md (a file named Family-Map_2026-11-10.md already existed and was left unchanged)
+completed. verified=true. outputFile: Family/Chaabi/Family-Map_2026-11-10_1532.md (a file named Family-Map_2026-11-10.md already existed and was left unchanged)
 
 ### file-agent · ug-filesystem stat on the saved file
-completed. Family/Next of Kin/Family-Map_2026-11-10_1532.md exists, 9 KB, 2026-11-10 15:33. The previous map Family/Next of Kin/Family-Map_2026-11-10.md also exists, unchanged, 9 KB, 2026-11-10 10:42.
+completed. Family/Chaabi/Family-Map_2026-11-10_1532.md exists, 9 KB, 2026-11-10 15:33. The previous map Family/Chaabi/Family-Map_2026-11-10.md also exists, unchanged, 9 KB, 2026-11-10 10:42.

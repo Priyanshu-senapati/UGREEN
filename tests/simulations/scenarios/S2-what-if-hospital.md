@@ -2,18 +2,18 @@
 
 - **Today:** 2026-11-10
 - **Conversation:** What if someone is unavailable
-- **Person asking:** Priya Sharma (daughter). She can read the folder Family/Next of Kin.
+- **Person asking:** Priya Sharma (daughter). She can read the folder Family/Chaabi.
 
 ## User turns (answers in order, as the Skill asks)
 
-1. Opening: "I am Priya. Papa was admitted to hospital this morning. What should we do? His Family Map is in the folder Family/Next of Kin."
+1. Opening: "I am Priya. Papa was admitted to hospital this morning. What should we do? His Family Map is in the folder Family/Chaabi."
 2. Situation: "Temporarily unavailable. He is in hospital and cannot talk much right now."
 3. Save the plan: "No, just show it to me."
 
 ## Mocks
 
-### file-agent · ug-filesystem find and read the Family Map in Family/Next of Kin
-completed. Newest file: Family/Next of Kin/Family-Map_2026-11-10.md. Its content is the full text under "## Saved artifact" in tests/simulations/results/S1.md. Use that text as the map.
+### file-agent · ug-filesystem find and read the Family Map in Family/Chaabi
+completed. Newest file: Family/Chaabi/Family-Map_2026-11-10.md. Its content is the full text under "## Saved artifact" in tests/simulations/results/S1.md. Use that text as the map.
 
 ### document-agent · ug-document qa
 - **On health-policy.pdf, about a cashless claim, the hospital desk, pre-authorisation or the TPA:** completed. Quote from Section 9, Cashless claim (p.6):

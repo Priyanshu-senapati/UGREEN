@@ -19,7 +19,7 @@ def test_kit_checker_static_pass():
 
 def test_frontmatter():
     fm = frontmatter(read(SKILL))
-    assert set(fm) == {"name", "description"} and fm["name"] == "next-of-kin"
+    assert set(fm) == {"name", "description"} and fm["name"] == "chaabi"
     assert len(fm["description"]) <= 1024 and "Use when" in fm["description"]
 
 def test_headings_evidence_and_links():
@@ -60,7 +60,7 @@ def test_readiness_change_types_and_freshness_header():
 
 def test_three_conversations_three_situations_and_scope():
     text = read(SKILL)
-    for heading in ("## Conversation 1: Set up Next of Kin", "## Conversation 2: Check our readiness",
+    for heading in ("## Conversation 1: Set up Chaabi", "## Conversation 2: Check our readiness",
                     "## Conversation 3: What if someone is unavailable"):
         assert heading in text
     for situation in ("Temporarily unavailable", "Long-term memory or decision-making difficulty", "Passed away"):

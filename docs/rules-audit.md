@@ -1,11 +1,11 @@
 # Rules audit: UGREEN Skill Content Safety and Publishing Guidelines
 
-Each clause that applies to Next of Kin, the requirement it sets, and where the package meets it. Every "Where" cell names a file in `skill/next-of-kin/` and a heading or passage that exists in that file.
+Each clause that applies to Chaabi, the requirement it sets, and where the package meets it. Every "Where" cell names a file in `skill/chaabi/` and a heading or passage that exists in that file.
 
 | Clause | Requirement | Where |
 |---|---|---|
 | 2.4 | Disclose core actions such as reading local files and sending data out | `references/privacy-and-consent.md#Consent script` |
-| 4.1 | Request only the minimum permissions | `SKILL.md#Conversation 1: Set up Next of Kin` |
+| 4.1 | Request only the minimum permissions | `SKILL.md#Conversation 1: Set up Chaabi` |
 | 4.2 | Access only isolated or explicitly authorised paths | `references/privacy-and-consent.md#Consent script` |
 | 4.3 | Use permissions only after explicit consent | `SKILL.md#Required input` |
 | 4.5 | Use granted permissions only for the declared function | `references/privacy-and-consent.md#Clause map` |

@@ -1,6 +1,6 @@
 # Family Map format
 
-The Family Map is one Markdown file per version. It is the only memory Next of Kin keeps between conversations, and family members read it as an ordinary document.
+The Family Map is one Markdown file per version. It is the only memory Chaabi keeps between conversations, and family members read it as an ordinary document.
 
 ## File naming and versions
 
@@ -14,7 +14,7 @@ The Family Map is one Markdown file per version. It is the only memory Next of K
 - Owner name.
 - `Map last updated:` date and time, and `Version:` number (1 for the first map, then 2, 3, …).
 - Previous version file name, or "none".
-- This line, verbatim: "Next of Kin is an organiser, not legal or financial advice. It does not give anyone legal or financial authority."
+- This line, verbatim: "Chaabi is an organiser, not legal or financial advice. It does not give anyone legal or financial authority."
 
 ## 2. Setup record
 

@@ -13,7 +13,7 @@ The parent Skill never runs NAS actions itself. It delegates each operation to t
 4. Keep partial results and label them **Partial**. Report what is known, not more.
 5. End every run with three lists: done · failed · not checked.
 
-## Conversation 1: Set up Next of Kin
+## Conversation 1: Set up Chaabi
 
 Operation numbers identify operations, not their order. `SKILL.md` sets the order. For example, voice notes are transcribed (operation 8) before their Hindi sentences are translated (operation 7).
 
@@ -24,7 +24,7 @@ Operation numbers identify operations, not their order. `SKILL.md` sets the orde
 - **Expected output:** Owner name, consent, model setting, allowed folders, voice-note language.
 - **Approval:** The owner's explicit yes, plus a separate explicit yes for a cloud model or a "not sure" answer.
 - **Failure condition:** No consent, or no explicit yes for a cloud model.
-- **Recovery:** Explain why Next of Kin cannot continue. Nothing is read.
+- **Recovery:** Explain why Chaabi cannot continue. Nothing is read.
 - **Continue:** Stop.
 
 ### 2. Check folder access
@@ -150,7 +150,7 @@ Operation numbers identify operations, not their order. `SKILL.md` sets the orde
 ### 14. Tag the original files (optional)
 - **Precondition:** The owner opted in.
 - **Permissions:** Tag permission on the listed originals.
-- **Agent and action:** file-agent, `ug-filemgr` `tag-get-by-name` to find the Next of Kin tag, then `ug-filemgr` `tag-add-file`. If the tag does not exist, the owner creates it once in File Manager.
+- **Agent and action:** file-agent, `ug-filemgr` `tag-get-by-name` to find the Chaabi tag, then `ug-filemgr` `tag-add-file`. If the tag does not exist, the owner creates it once in File Manager.
 - **Expected output:** Tags applied.
 - **Approval:** Each tag change needs approval.
 - **Failure condition:** Tagging fails or is declined.

@@ -1,12 +1,12 @@
 # S4: Set up with failures along the way
 
 - **Today:** 2026-11-10
-- **Conversation:** Set up Next of Kin
+- **Conversation:** Set up Chaabi
 - **Owner:** Ramesh Sharma (present)
 
 ## User turns (answers in order, as the Skill asks)
 
-1. Opening: "I am Ramesh Sharma. Please set up Next of Kin for my family."
+1. Opening: "I am Ramesh Sharma. Please set up Chaabi for my family."
 2. Whose records: "Mine, Ramesh Sharma."
 3. Present and consenting: "Yes, I am here and I consent."
 4. Model: "Uliya runs on the local model on this NAS."
@@ -14,7 +14,7 @@
 6. Voice-note language: "They are mixed Hindi and English."
 7. Translation approval, if the NAS asks: "Yes, translate."
 8. Preview approval: "Yes, save it."
-9. Destination: "Private Map, in the folder Ramesh/Next of Kin."
+9. Destination: "Private Map, in the folder Ramesh/Chaabi."
 10. Tags: "No tags."
 
 ## Mocks
@@ -110,7 +110,7 @@ failed for every call. "evidence service unavailable".
 completed. An empty list: there are no Family-Map files in this folder yet.
 
 ### knowledge-agent · ug-knowledge save-text
-completed. verified=true. outputFile: Ramesh/Next of Kin/Family-Map_2026-11-10.md
+completed. verified=true. outputFile: Ramesh/Chaabi/Family-Map_2026-11-10.md
 
 ### file-agent · ug-filesystem stat on the saved file
-completed. Ramesh/Next of Kin/Family-Map_2026-11-10.md exists, 9 KB, 2026-11-10 10:42.
+completed. Ramesh/Chaabi/Family-Map_2026-11-10.md exists, 9 KB, 2026-11-10 10:42.

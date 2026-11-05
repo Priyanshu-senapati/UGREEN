@@ -1,4 +1,4 @@
-"""Deterministic checks over simulated Next of Kin run results."""
+"""Deterministic checks over simulated Chaabi run results."""
 import re
 import sys
 from pathlib import Path

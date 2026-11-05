@@ -1,6 +1,6 @@
-"""Build the Round 1 Skill package ZIP: dist/next-of-kin.zip.
+"""Build the Round 1 Skill package ZIP: dist/chaabi.zip.
 
-The ZIP holds one top folder, next-of-kin/, with SKILL.md and references/*.md only,
+The ZIP holds one top folder, chaabi/, with SKILL.md and references/*.md only,
 in sorted order with fixed timestamps so the same sources always give the same bytes.
 """
 from __future__ import annotations
@@ -10,7 +10,7 @@ import zipfile
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-TOP_FOLDER = "next-of-kin"
+TOP_FOLDER = "chaabi"
 FIXED_TIME = (1980, 1, 1, 0, 0, 0)
 
 

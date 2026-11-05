@@ -1,27 +1,27 @@
 ---
-name: next-of-kin
-description: Family continuity map built from the documents, document photos and voice notes a family already keeps on the NAS, with a readiness check and a source-linked plan for the day the person who knows everything is unavailable. Use when a family wants to set up Next of Kin, check how ready they are, or asks what to do if a parent or another key person becomes unavailable.
+name: chaabi
+description: Family continuity map built from the documents, document photos and voice notes a family already keeps on the NAS, with a readiness check and a source-linked plan for the day the person who knows everything is unavailable. Use when a family wants to set up Chaabi, check how ready they are, or asks what to do if a parent or another key person becomes unavailable.
 ---
 
 # Goal
 
-Next of Kin helps a family keep working when the person who holds all the family's paperwork knowledge (the owner) becomes unavailable through hospitalisation, memory loss or death. It reads what the family already keeps on the NAS, so nobody has to fill in forms, and turns it into a **Family Map**: every policy, account, property paper, pension order, loan and contact, with where each paper original is kept. Each fact is labelled Verified, Unverified, Conflict or Missing and linked to its source.
+Chaabi (Hindi for "key") helps a family keep working when the person who holds all the family's paperwork knowledge (the owner) becomes unavailable through hospitalisation, memory loss or death. It reads what the family already keeps on the NAS, so nobody has to fill in forms, and turns it into a **Family Map**: every policy, account, property paper, pension order, loan and contact, with where each paper original is kept. Each fact is labelled Verified, Unverified, Conflict or Missing and linked to its source.
 
 It supports three conversations:
 
-1. **Set up Next of Kin**, run with the owner: builds and saves the Family Map after the owner approves it.
+1. **Set up Chaabi**, run with the owner: builds and saves the Family Map after the owner approves it.
 2. **Check our readiness**: reports conflicts, items expiring soon, missing documents, unverified facts and changes since the last map.
 3. **What if someone is unavailable**: builds a phased continuity plan from the map and the family's own documents.
 
 Scope and limits:
-- Next of Kin is an organiser, not legal or financial advice, and it does not give anyone legal or financial authority.
+- Chaabi is an organiser, not legal or financial advice, and it does not give anyone legal or financial authority.
 - It does not store passwords, PINs, OTPs, CVVs, full card numbers or net-banking IDs. Identifiers are masked to their last 4 characters.
 - It does not change who can access anything. It works only within the NAS access the person using it already has.
 - It never moves, edits, renames or deletes original files, never sends anything outside the NAS, and never makes claims, payments or transfers.
 
 # Required input
 
-For **Set up Next of Kin**, collect these through the consent script in [Privacy and consent](references/privacy-and-consent.md) before any delegation:
+For **Set up Chaabi**, collect these through the consent script in [Privacy and consent](references/privacy-and-consent.md) before any delegation:
 - the owner's name, and the owner's explicit consent, given while present;
 - the model setting: local, or cloud with a separate explicit consent. Treat "not sure" the same as a cloud model;
 - the folders the owner allows, named one by one;
@@ -53,7 +53,7 @@ Rules for every conversation:
 - Give each delegation only the files that its task needs.
 - Follow [the execution contract](references/execution-contract.md) for preconditions, approvals, failures and recovery at every step.
 
-## Conversation 1: Set up Next of Kin
+## Conversation 1: Set up Chaabi
 
 1. **Consent and privacy.** Run the consent script. Continue only after the owner's explicit consent, and a separate explicit consent if the model is cloud or "not sure". Without it, stop and explain why.
 2. **Check folder access.** Delegate:
@@ -89,7 +89,7 @@ Rules for every conversation:
 13. **Confirm the save.** Delegate:
    `delegate --target file-agent --instruction 'Use ug-filesystem stat on the saved Family Map file path returned by the save step, and on the previous map file if there is one, and report whether each exists, with its size and time.'`
 14. **Optional tags.** Only if the owner asks, delegate:
-   `delegate --target file-agent --instruction 'Use ug-filemgr tag-get-by-name to find the tag named Next of Kin, and add it with ug-filemgr tag-add-file to the listed original files only, after the owner approves each change. If the tag does not exist, report that and add nothing.'`
+   `delegate --target file-agent --instruction 'Use ug-filemgr tag-get-by-name to find the tag named Chaabi, and add it with ug-filemgr tag-add-file to the listed original files only, after the owner approves each change. If the tag does not exist, report that and add nothing.'`
    If the tag does not exist, ask the owner to create it once in File Manager.
 
 ## Conversation 2: Check our readiness

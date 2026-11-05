@@ -1,4 +1,4 @@
-"""Generate the synthetic Sharma family dataset used to test Next of Kin.
+"""Generate the synthetic Sharma family dataset used to test Chaabi.
 
 Usage:
     python sample-family/generate.py --out sample-family/out --today 2026-11-10 [--with-audio]

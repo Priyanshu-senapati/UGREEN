@@ -5,20 +5,20 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from build_zip import build_zip
 
 def test_zip_layout_and_limits(tmp_path):
-    z = build_zip(SKILL_DIR, tmp_path / "next-of-kin.zip")
+    z = build_zip(SKILL_DIR, tmp_path / "chaabi.zip")
     infos = zipfile.ZipFile(z).infolist()
     names = sorted(i.filename for i in infos)
-    assert names[0] == "next-of-kin/SKILL.md" and all(n.startswith("next-of-kin/") for n in names)
+    assert names[0] == "chaabi/SKILL.md" and all(n.startswith("chaabi/") for n in names)
     assert len(names) == 6 and all(i.file_size <= 1_048_576 for i in infos)
     assert z.stat().st_size <= 10 * 1_048_576
 
 def test_extracted_zip_passes_kit_checker(tmp_path):
-    z = build_zip(SKILL_DIR, tmp_path / "next-of-kin.zip")
+    z = build_zip(SKILL_DIR, tmp_path / "chaabi.zip")
     zipfile.ZipFile(z).extractall(tmp_path / "x")
-    assert run_kit_checker(tmp_path / "x" / "next-of-kin")["status"] == "static-pass"
+    assert run_kit_checker(tmp_path / "x" / "chaabi")["status"] == "static-pass"
 
 def test_refuses_non_markdown(tmp_path):
-    copy = tmp_path / "next-of-kin"
+    copy = tmp_path / "chaabi"
     shutil.copytree(SKILL_DIR, copy)
     (copy / "notes.txt").write_text("x")
     with pytest.raises(ValueError):
