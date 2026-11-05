@@ -79,6 +79,7 @@ Every finding names the item ID, what was found, its source IDs, and a suggested
 4. **Unverified**: a fact comes only from a voice note, or the text was hard to read.
 5. **Review**: different items differ in a way worth checking. This is not an error.
 6. **Gap**: an expected detail is absent.
+7. Step failures: **Not searched**, **Not cross-checked**, **Unreadable**, **Not translated** and **Not transcribed**, each naming the file or item affected.
 
 ## 7. Sources and changes
 

@@ -15,6 +15,8 @@ The parent Skill never runs NAS actions itself. It delegates each operation to t
 
 ## Conversation 1: Set up Next of Kin
 
+Operation numbers identify operations, not their order. `SKILL.md` sets the order. For example, voice notes are transcribed (operation 8) before their Hindi sentences are translated (operation 7).
+
 ### 1. Consent and privacy
 - **Precondition:** The owner is present.
 - **Permissions:** None yet. Nothing has been read.
