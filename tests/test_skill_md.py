@@ -47,6 +47,11 @@ def test_review_focus_rules():
     assert "batches of at most 60 files" in text
     assert "empty list" in text and "real result" in text
 
+def test_transcribe_before_translate():
+    text = read(SKILL)
+    assert text.index("**Transcribe voice notes.**") < text.index("**Translate Hindi sentences.**")
+
+
 def test_readiness_change_types_and_freshness_header():
     text = read(SKILL)
     for change in ("new file", "file modified", "fact changed", "conflict resolved", "new conflict"):

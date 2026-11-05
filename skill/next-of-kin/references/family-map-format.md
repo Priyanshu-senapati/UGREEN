@@ -33,7 +33,7 @@ One table row per item:
 
 - **Reference** shows only the last 4 characters (`XXXX-4821`).
 - **Key date** is the next date that matters: premium due, maturity, renewal, EMI.
-- **Paper original** is where the physical document is kept, if any source says so.
+- **Paper original** is where the physical document is kept, only if a source says so. Otherwise write "—" and raise no finding: not knowing where a paper is kept is normal, not a gap.
 - **Status** is the item's most serious label or finding.
 
 Items covered: life insurance, health insurance, bank accounts, fixed deposits, property (deeds, land records), investments (mutual funds, demat, PPF, EPF, NPS), pension, loans, bank locker, will, vehicle. Identity documents are recorded by **location only**.
@@ -47,6 +47,8 @@ One card per item. The title line uses exactly this form:
 Each card lists the facts for that item, one per line. Every fact line ends with its label and its source: the source ID from section 7 plus a page (`S2 p.1`) or a voice-note timestamp (`S9 00:14–00:22`).
 
 Items mentioned only in a voice note get their own card, with status **Missing**, **Unverified** or **Not searched**. An example is village land papers that are mentioned but not found.
+
+A **Missing** or **Not searched** fact line cites the source that mentions the item, then the search outcome. For example: "- Village land papers: with Suresh · Missing · S8 00:31–00:40; searched 2026-11-10, empty list".
 
 For a fact read from a Hindi source, the card keeps the original sentence (at most 2 sentences around the fact) and a translation labelled "Translation:". The original is never replaced.
 
@@ -95,7 +97,7 @@ Every finding names the item ID, what was found, its source IDs, and a suggested
 
 - **Review**: different items differ in a way worth checking, for example a bank nominee who differs from an insurance nominee on a different product.
 - **Gap**: an expected detail is absent, for example no nominee on a mutual fund statement. Wording is always "not found in the folders you shared", never "you have none".
-- **Expiring**: a date within 30 days of today, or a date that has passed. The raw date is always shown next to this label.
+- **Expiring**: a deadline within 30 days of today, or one that has passed: a premium or renewal due date, a maturity, a policy end date, or a submission such as a pension life certificate. Routine recurring payments such as monthly EMIs and bills are recorded as facts, never as Expiring. The raw date is always shown next to this label.
 - **Not searched**: the search for a mentioned item failed, so nothing is known. It is never shown as Missing.
 - **Not cross-checked**: comparing documents about the same item failed, so no agreement is claimed.
 - **Unreadable**: a file or photo could not be read.
@@ -105,7 +107,7 @@ Every finding names the item ID, what was found, its source IDs, and a suggested
 ## Privacy rules inside the map
 
 - Policy, account, folio, loan, PAN and Aadhaar numbers show only the last 4 characters, for example `XXXX-4821`. The full number stays in the original document, which the map points to.
-- Never copied into the map: passwords, PINs, OTPs, CVVs, full card numbers, net-banking IDs. If a file appears to contain any of these, the finding says: "S7 appears to contain passwords; not copied. Consider storing them securely."
+- Never copied into the map: passwords, PINs, OTPs, CVVs, full card numbers, net-banking IDs. If a file appears to contain any of these, list a **Review** finding: "S7 appears to contain passwords; not copied. Consider storing them securely."
 - Health: no diagnoses or medical details. Only health-insurance details and the location of medical records are kept.
 - Photos of people are never described or stored.
 - Amounts are kept only where they help (sum assured, loan outstanding) and always carry an "as of" date.

@@ -62,21 +62,21 @@ Rules for every conversation:
 3. **Find documents and audio.** Delegate:
    `delegate --target file-agent --instruction 'Use ug-filesystem find with type documents and then with type audio in only the accessible allowed folders, and use ug-filesystem stat to report each file path, type and last-modified date. If a folder returns an empty list, report that folder as empty. Search no other folder.'`
    Number every file as a source: S1, S2, and so on.
-4. **Find document photos.** If the owner allowed a photo folder, delegate:
-   `delegate --target photo-agent --instruction 'Use ug-photo search-picture with ocr-contains once for each search term policy, premium, passbook, nominee, deed, receipt, बीमा, खाता, पेंशन, limited to the allowed photo folder. Return only the matching photo paths and open, describe or analyse no other photo. If every search returns an empty list, report that.'`
+4. **Find document photos and scans.** Delegate:
+   `delegate --target photo-agent --instruction 'Use ug-photo search-picture with ocr-contains once for each search term policy, premium, passbook, nominee, deed, receipt, Aadhaar, identity, बीमा, खाता, पेंशन, limited to the allowed folders. Return only the matching image paths and open, describe or analyse no other image. If every search returns an empty list, report that.'`
    If photo search is unsupported or fails, report that photos were not searched. Never open all photos instead.
 5. **Read documents.** Delegate:
    `delegate --target document-agent --instruction 'Use ug-document extract with schema mixed on the listed files only, in batches of at most 60 files. For each file return the item type, institution, reference number showing only its last 4 characters, holder, nominee, key dates, amounts with their as-of date, contacts, and the page of each fact. For a fact written in Hindi also return the original sentence. Never return passwords, PINs, OTPs, CVVs, full card numbers, net-banking IDs or full identity numbers, and if a file seems to contain them report only that it does. Name each unreadable file.'`
 6. **Read document photos.** Delegate:
    `delegate --target photo-agent --instruction 'Use ug-photo vision-vlm on each listed photo and ask for the item type, institution, reference number showing only its last 4 characters, holder, nominee, key dates and amounts with their as-of date shown in this document image. If vision-vlm fails for a photo, use ug-photo vision-ocr on that photo. Never return full identity numbers, passwords, PINs or OTPs. Name each photo that neither action can read.'`
-7. **Translate Hindi sentences.** For each fact with an original Hindi sentence, delegate:
-   `delegate --target document-agent --instruction 'Use ug-document translate on the given Hindi sentence only, with target language English, and return the translation labelled as a translation. Translate nothing else.'`
-   If the NAS asks for approval, ask the owner. If translation fails or is declined, keep the original and label the fact Not translated.
-8. **Transcribe voice notes.** Delegate:
+7. **Transcribe voice notes.** Delegate:
    `delegate --target knowledge-agent --instruction 'Use ug-knowledge audio-transcription on each listed voice note with timestamped segments. Set the language to hi or en only when the owner named that language, and leave the language unset for mixed or unknown speech. Name each file that cannot be transcribed.'`
    Facts from voice notes stay Unverified until a document confirms them, and each one cites its timestamp.
-9. **Cross-check the same item.** When two or more sources describe the same reference number or the same property, delegate:
-   `delegate --target document-agent --instruction 'Use ug-document reconcile on only the listed files, which describe the same reference number or the same property, and report where they agree and where they differ, with pages.'`
+8. **Translate Hindi sentences.** For each fact whose original sentence is in Hindi, whether from a document, a photo or a voice-note transcript, delegate:
+   `delegate --target document-agent --instruction 'Use ug-document translate on the given Hindi sentence only, with target language English, and return the translation labelled as a translation. Translate nothing else.'`
+   If the NAS asks for approval, ask the owner. If translation fails or is declined, keep the original and label the fact Not translated.
+9. **Cross-check the same item.** When two or more sources describe the same reference number or the same property, send all of them together in one request:
+   `delegate --target document-agent --instruction 'Use ug-document reconcile on only the listed files, which all describe the same reference number or the same property, and report where they agree and where they differ, with pages.'`
    A difference on the same item is a Conflict. A difference between different items, such as a bank nominee and an insurance nominee, is only a Review finding. A duplicate copy of the same document adds a second source; it is not a conflict.
 10. **Search for mentioned items.** For each item mentioned in a document or voice note but not yet found, delegate:
    `delegate --target knowledge-agent --instruction 'Use ug-knowledge collect-evidence to look for the named item within the allowed folders only, and return the evidence with file paths, or an empty list if nothing matches.'`

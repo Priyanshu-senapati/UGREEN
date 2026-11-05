@@ -46,9 +46,9 @@ The parent Skill never runs NAS actions itself. It delegates each operation to t
 - **Continue:** Yes, if any file was found in any folder.
 
 ### 4. Find document photos
-- **Precondition:** The owner allowed a photo folder.
-- **Permissions:** Read access to that photo folder only.
-- **Agent and action:** photo-agent, `ug-photo` `search-picture` with `ocr-contains` search terms (policy, premium, passbook, nominee, deed, बीमा, खाता, पेंशन).
+- **Precondition:** At least one accessible allowed folder. Scans and phone photos of documents can sit in any of them.
+- **Permissions:** Read access to the allowed folders only.
+- **Agent and action:** photo-agent, `ug-photo` `search-picture` with `ocr-contains` search terms (policy, premium, passbook, nominee, deed, receipt, Aadhaar, identity, बीमा, खाता, पेंशन), limited to the allowed folders.
 - **Expected output:** List of candidate photos whose indexed text matches.
 - **Approval:** None.
 - **Failure condition:** The action is unsupported or fails.
